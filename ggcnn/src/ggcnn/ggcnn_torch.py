@@ -9,11 +9,15 @@ import torch
 
 from dougsm_helpers.timeit import TimeIt
 
+import ggcnn2
+model = ggcnn2.GGCNN2(4)
+
 MODEL_FILE = 'models/epoch_24_iou_0.82_morezoom'
 here = path.dirname(path.abspath(__file__))
 sys.path.append(here)
 print(path.join(path.dirname(__file__), MODEL_FILE))
-model = torch.load(path.join(path.dirname(__file__), MODEL_FILE))
+# model = torch.load(path.join(path.dirname(__file__), MODEL_FILE))
+model.load_state_dict(torch.load(path.join(path.dirname(__file__), MODEL_FILE)))
 device = torch.device("cuda:0")
 
 
