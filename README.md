@@ -1,3 +1,6 @@
+# FORKED FROM :
+https://github.com/dougsm/mvp_grasp
+
 # GG-CNN + Multi-View Picking
 
 This repository contains the implementation of the Multi-View Picking system and experimental code for running on a [Franka Emika Panda](https://www.franka.de/panda/) Robot from the paper:
