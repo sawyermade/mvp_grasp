@@ -10,7 +10,9 @@ from tensorflow.keras.models import load_model
 from dougsm_helpers.timeit import TimeIt
 
 MODEL_FILE = 'models/epoch_29_model.hdf5'
-model = load_model(path.join(path.dirname(__file__), MODEL_FILE))
+# model = load_model(path.join(path.dirname(__file__), MODEL_FILE))
+import keras
+model = keras.models.load_model(path.join(path.dirname(__file__), MODEL_FILE))
 graph = tf.get_default_graph()
 
 TimeIt.print_output = False  # For debugging/timing

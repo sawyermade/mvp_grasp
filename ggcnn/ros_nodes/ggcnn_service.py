@@ -3,7 +3,7 @@
 from __future__ import division, print_function
 
 import rospy
-
+rospy.init_node('ggcnn_service')
 import time
 
 import numpy as np
@@ -112,6 +112,6 @@ class GGCNNService:
 
 
 if __name__ == '__main__':
-    rospy.init_node('ggcnn_service')
+    # rospy.init_node('ggcnn_service')
     GGCNN = GGCNNService()
     rospy.spin()

@@ -3,7 +3,7 @@
 from __future__ import division, print_function
 
 import rospy
-
+rospy.init_node('grasp_entropy_node')
 import time
 
 import numpy as np
@@ -340,6 +340,6 @@ class ViewpointEntropyCalculator:
 
 
 if __name__ == '__main__':
-    rospy.init_node('grasp_entropy_node')
+    # rospy.init_node('grasp_entropy_node')
     VEC = ViewpointEntropyCalculator()
     rospy.spin()
